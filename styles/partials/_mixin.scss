@@ -9,5 +9,13 @@
 }
 @mixin img{
     width: 100%;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
+}
+@mixin margin {
+    margin: 1.5rem 1rem 1rem 1rem;
+}
+@mixin heading{
+    font-weight: 600;
+    color: #323232;
+    font-size: 2rem;
 }
