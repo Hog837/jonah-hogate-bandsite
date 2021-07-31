@@ -1,0 +1,21 @@
+@use './mixin' as *;
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &__container{
+        @include img;
+        display: flex;
+        margin: 0;
+        height: 15rem;
+        background-image: url("../assets/Images/hero-bio.jpg");
+        background-size: cover;
+        background-position: center;
+        align-items: center;
+    }
+    &__text{
+        color: #fff;
+        padding: 1rem;
+    }
+}
