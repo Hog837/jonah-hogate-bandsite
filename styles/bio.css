@@ -137,17 +137,18 @@ html {
   padding: 1rem 0 1rem 0;
   line-height: 1.5rem;
 }
-.footer__footer-nav {
+.footer__nav {
   padding: 2rem 0 1rem 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
 }
 @media only screen and (min-width: 768px) {
-  .footer__footer-nav {
-    display: flex;
+  .footer__nav {
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    padding: 0 0 1rem 0;
   }
 }
 .footer__heading {
