@@ -6,7 +6,10 @@
     @include nav;
     flex-direction: column;
     align-items: center;
-
+    @include tablet-view{
+        flex-direction: row;
+        align-items:center;
+    }
     &__nav{
         @include nav;
         justify-content: space-evenly;
@@ -19,6 +22,9 @@
 
         @include tablet-view{
             margin: 0 2.5rem 0 2.5rem;
+        }
+        @include desktop-view{
+        padding-left: 3rem;
         }
     }
     &__list{
@@ -42,7 +48,9 @@
             display: block;
             padding-bottom: .5rem;
 
-        
+            @include desktop-view{
+                 font-size: 0.8125rem;
+            }
         
 
         &:hover {
@@ -65,16 +73,14 @@
                 padding-bottom: 2.625rem;
                 
             }
+            @include desktop-view{
+                font-size: 0.8125rem;
+            }
         }
         @include tablet-view{
             padding-bottom: 0;
             padding-left: 2rem;
         }
-    }
-    @include tablet-view{
-        flex-direction: row;
-        align-items:center;
-    
     }
 }
 
