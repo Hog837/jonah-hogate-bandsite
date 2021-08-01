@@ -82,6 +82,7 @@
 
 .footer {
     display: flex;
+    position: relative;
     color: #fff;
     background-color: #323232;
     margin-top: 1rem;
@@ -90,6 +91,14 @@
     line-height: 1.125rem;
     size: 0.8125rem;
     font-weight: 400;
+    @include tablet-view{
+        margin: 0%;
+        padding-left: 3rem;
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+        justify-content: flex-start;
+        
+    }
 
     &__contact-info{
         padding: 1rem 0 1rem 0;
@@ -99,21 +108,38 @@
         padding: 2rem 0 1rem 0;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
+        @include tablet-view{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
     }
     &__heading{
         @include heading;
         font-size: 1.75rem;
         color: #fff;
         padding: 1rem 0 1rem 0;
+        @include tablet-view{
+            padding-right: 2rem;
+        }
     }
     &__icons{
         word-spacing: 3rem;
+        @include tablet-view{
+            word-spacing: 2rem;
+        }
     }
     &__logo{
         width: 10rem;
         height: auto;
         padding: 4rem 0 1rem 0;
+        @include tablet-view{
+            position: absolute;
+            right: 3rem;
+            top: 0rem;
+            width: 7rem;
+        }
     }
     &__copyright{
         line-height: 1.25rem;
@@ -123,19 +149,17 @@
         @include tablet-view{
             display: flex;
             flex-direction: column;
-            padding: 0 3rem 0 1rem;
-            
-            
+            padding: 0 3rem 0 0;
         }
     }
     &__contact-container{
         @include tablet-view{
             display: flex;
             flex-direction: row;
-            padding: 1rem;
             font-size: 0.875rem;
             line-height: 1.25rem;
             font-weight: 400;
+            padding-bottom: 2rem;
         }
     }
 }

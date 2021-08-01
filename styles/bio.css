@@ -114,6 +114,7 @@ html {
 
 .footer {
   display: flex;
+  position: relative;
   color: #fff;
   background-color: #323232;
   margin-top: 1rem;
@@ -123,6 +124,15 @@ html {
   size: 0.8125rem;
   font-weight: 400;
 }
+@media only screen and (min-width: 768px) {
+  .footer {
+    margin: 0%;
+    padding-left: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    justify-content: flex-start;
+  }
+}
 .footer__contact-info {
   padding: 1rem 0 1rem 0;
   line-height: 1.5rem;
@@ -131,7 +141,14 @@ html {
   padding: 2rem 0 1rem 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+}
+@media only screen and (min-width: 768px) {
+  .footer__footer-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 .footer__heading {
   font-weight: 600;
@@ -141,13 +158,31 @@ html {
   color: #fff;
   padding: 1rem 0 1rem 0;
 }
+@media only screen and (min-width: 768px) {
+  .footer__heading {
+    padding-right: 2rem;
+  }
+}
 .footer__icons {
   word-spacing: 3rem;
+}
+@media only screen and (min-width: 768px) {
+  .footer__icons {
+    word-spacing: 2rem;
+  }
 }
 .footer__logo {
   width: 10rem;
   height: auto;
   padding: 4rem 0 1rem 0;
+}
+@media only screen and (min-width: 768px) {
+  .footer__logo {
+    position: absolute;
+    right: 3rem;
+    top: 0rem;
+    width: 7rem;
+  }
 }
 .footer__copyright {
   line-height: 1.25rem;
@@ -157,17 +192,17 @@ html {
   .footer__contact {
     display: flex;
     flex-direction: column;
-    padding: 0 3rem 0 1rem;
+    padding: 0 3rem 0 0;
   }
 }
 @media only screen and (min-width: 768px) {
   .footer__contact-container {
     display: flex;
     flex-direction: row;
-    padding: 1rem;
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 400;
+    padding-bottom: 2rem;
   }
 }
 
@@ -289,10 +324,11 @@ html {
 }
 @media only screen and (min-width: 768px) {
   .photo-gallery {
+    font-size: 0.75rem;
+    padding: 3rem 2rem 2rem 2rem;
     font-weight: 600;
     color: #323232;
     font-size: 2rem;
-    font-size: 0.875rem;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -321,6 +357,6 @@ html {
 }
 @media only screen and (min-width: 768px) {
   .photo-gallery__heading {
-    padding: 2rem 0 1rem 1rem;
+    padding: 1rem 0 1rem 1rem;
   }
 }/*# sourceMappingURL=bio.css.map */
