@@ -76,14 +76,29 @@
 
 .photo-gallery{
     background-color: #FAFAFA;
-    width: 100;
+    width: 100%;
     padding: 0 1rem;
-    
+    @include tablet-view{
+        @include heading;
+        font-size: 0.875rem;
+        
+
+
+    }
+    &__container{
+        @include tablet-view{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%
+            
+        }
+    }
 
     &__image{
         @include img;
         @include tablet-view{
-            width: 30%;
+            width: 33%;
             padding: 0 .5rem .25rem 1rem;   
         }
     } 

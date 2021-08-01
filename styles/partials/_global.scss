@@ -119,5 +119,24 @@
         line-height: 1.25rem;
         font-size: .95rem;
     }
+    &__contact{
+        @include tablet-view{
+            display: flex;
+            flex-direction: column;
+            padding: 0 3rem 0 1rem;
+            
+            
+        }
+    }
+    &__contact-container{
+        @include tablet-view{
+            display: flex;
+            flex-direction: row;
+            padding: 1rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            font-weight: 400;
+        }
+    }
 }
 
