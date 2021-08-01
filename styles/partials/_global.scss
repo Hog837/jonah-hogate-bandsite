@@ -51,32 +51,6 @@
             @include desktop-view{
                  font-size: 0.8125rem;
             }
-        
-
-        &:hover {
-            color: #fff;
-            border-bottom:solid 2px #fff;
-            width: 100%;
-            padding-bottom: 1.3rem;
-            @include tablet-view{
-                padding-bottom: 2rem;
-            }
-            
-        }
-        &--active{
-            color: #fff;
-            border-bottom:solid 2px #fff;
-            padding-bottom: 1.45rem;
-            text-decoration: none;
-            @include tablet-view{
-                margin-left: 2rem;
-                padding-bottom: 2.625rem;
-                
-            }
-            @include desktop-view{
-                font-size: 0.8125rem;
-            }
-        }
         @include tablet-view{
             padding-bottom: 0;
             padding-left: 2rem;
@@ -103,7 +77,10 @@
         padding-top: 3rem;
         padding-bottom: 2rem;
         justify-content: flex-start;
-        
+    }
+    @include desktop-view{
+        padding-left: 6rem;
+        padding-right: 6rem;
     }
 
     &__contact-info{
@@ -148,6 +125,10 @@
             top: 0rem;
             width: 7rem;
         }
+        @include desktop-view{
+            right: 7rem;
+            top: 0rem;
+        }
     }
     &__copyright{
         line-height: 1.25rem;
@@ -158,6 +139,9 @@
             display: flex;
             flex-direction: column;
             padding: 0 3rem 0 0;
+        }
+        @include desktop-view{
+            padding-right: 3rem;
         }
     }
     &__contact-container{

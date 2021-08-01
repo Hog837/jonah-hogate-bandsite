@@ -16,6 +16,9 @@
             line-height: 2.75rem;
             font-weight: 600;
         }
+        @include desktop-view{
+            padding-left: 6rem;
+        }
     }
     &__quote{
         font-weight: 700;
@@ -24,9 +27,9 @@
         @include tablet-view{
             padding: 0 4rem 1rem 4rem;
             font-weight: 600;
-           
-            
-
+        }
+        @include desktop-view{
+            padding-left: 10rem;
         }
     }
     &__quote-text{
@@ -35,7 +38,9 @@
             font-size: 20px;
             font-weight: 600;
             text-height: 1.35rem; 
-
+        }
+        @include desktop-view{
+            padding-right: 14rem;
         }
     }
     &__image{
@@ -44,8 +49,10 @@
         margin-bottom: 1rem;
         @include tablet-view{
             padding: 0 4rem 1rem 4rem;
-            font-weight: 400;
-            
+            font-weight: 400;  
+        }
+        @include desktop-view{
+            padding: 1rem 10rem 2rem 10rem;
         }
     }
     &__name{
@@ -55,12 +62,21 @@
         @include tablet-view{
             padding: 0 0 1rem 4rem;
         }
+        @include desktop-view{
+            padding-left: 10rem;
+            font-weight: 700;
+            font-size: 1.625rem;
+        }
     }
     &__paragraph-container{
         @include tablet-view{
             display: flex;
             flex-direction: row;
             padding: 0 4rem 1rem 4rem;
+        }
+        @include desktop-view{
+            padding-left: 10rem;
+            padding-right: 10rem;
         }
     }
     &__paragraph{
@@ -83,9 +99,10 @@
         font-size: 0.75rem;
         padding: 3rem 2rem 2rem 2rem;
         @include heading;
-        
-
-
+    }
+    @include desktop-view{
+        padding-left: 6rem;
+        padding-right: 6rem;
     }
     &__container{
         @include tablet-view{
