@@ -255,3 +255,12 @@ html {
     padding-left: 10rem;
   }
 }/*# sourceMappingURL=shows.css.map */
+
+.show-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.show-container h2 {
+  
+}
