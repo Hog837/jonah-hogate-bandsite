@@ -44,19 +44,19 @@ showsList.appendChild(showListSection);
 /*create dates section*/
 
 const datesHeader = document.createElement('span');
-datesHeader.classList.add('shows__header');
+datesHeader.classList.add('shows__headers');
 datesHeader.innerText = 'DATES';
 showListSection.appendChild(datesHeader);
 
 const datesData = document.createElement('p');
-datesData.classList.add('shows__date');
+datesData.classList.add('shows__data');
 datesData.innerText = showData.date;
 showListSection.appendChild(datesData);
 
 /*creates venue section*/
 
 const venueHeader = document.createElement('span');
-venueHeader.classList.add('shows__header');
+venueHeader.classList.add('shows__headers');
 venueHeader.innerText = 'VENUE';
 showListSection.appendChild(venueHeader);
 
@@ -68,7 +68,7 @@ showListSection.appendChild(venueData);
 /*create location section*/
 
 const locationHeader = document.createElement('span');
-locationHeader.classList.add('shows__header');
+locationHeader.classList.add('shows__headers');
 locationHeader.innerText = 'LOCATION';
 showListSection.appendChild(locationHeader);
 

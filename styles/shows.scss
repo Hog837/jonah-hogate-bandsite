@@ -3,9 +3,45 @@
 @use './partials/hero' as *;
 @use './partials/mixin' as *;
 
+
 .shows {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     
+    &__headers{
+        font-weight: 400;
+        color: #E1E1E1;
+        font-size: 0.75rem;
+        padding-left: 1.5rem;
+
+    }
+    &__button{
+        color: #FAFAFA;
+        background-color: #323232;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: .75rem;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        height: 2.5rem;
+        border-radius: .525rem;
+    }
+    &__heading{
+        font-weight: 600;
+        font-size: 2.5rem;
+        padding: 2rem 0 1.5rem 1.5rem ;
+    }
+    &__data{
+        font-weight: 600;
+        padding-left: 1.5rem;
+        padding-bottom: .75rem;
+        color: #000;
+    }
+    &__divider{
+        color: #AFAFAF;
+        background-color: #FAFAFA;
+        height: 1rem;
+    }
 }
 
