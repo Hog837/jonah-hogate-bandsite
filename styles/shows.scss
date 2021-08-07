@@ -3,7 +3,9 @@
 @use './partials/hero' as *;
 @use './partials/mixin' as *;
 
-.show-container {
+.shows {
     display: flex;
     flex-direction: row;
+    
 }
+

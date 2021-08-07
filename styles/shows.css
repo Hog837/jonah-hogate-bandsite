@@ -254,13 +254,9 @@ html {
   .hero__text {
     padding-left: 10rem;
   }
-}/*# sourceMappingURL=shows.css.map */
+}
 
-.show-container {
+.shows {
   display: flex;
   flex-direction: row;
-}
-
-.show-container h2 {
-  
-}
+}/*# sourceMappingURL=shows.css.map */
