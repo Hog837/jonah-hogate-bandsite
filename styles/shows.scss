@@ -2,25 +2,29 @@
 @use './partials/global' as *;
 @use './partials/hero' as *;
 @use './partials/mixin' as *;
+@use './partials/shows-hero' as *;
 
 
 .shows {
     display: flex;
     flex-direction: column;
+    @include tablet-view{
+        padding: 0;
+    }
     
     &__headers{
         font-weight: 400;
-        color: #E1E1E1;
+        color: #AFAFAF;
         font-size: 0.75rem;
         padding-left: 1.5rem;
-
+        padding-bottom: 0.5rem;
+        display: block;
     }
     &__button{
         color: #FAFAFA;
         background-color: #323232;
         font-size: 1rem;
         font-weight: 600;
-        margin-bottom: .75rem;
         width: 90%;
         margin-left: 5%;
         margin-right: 5%;
@@ -39,9 +43,11 @@
         color: #000;
     }
     &__divider{
-        color: #AFAFAF;
-        background-color: #FAFAFA;
-        height: 1rem;
+        margin: auto;
+        border-top:1px solid #AFAFAF;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        width: 90%;
+
     }
 }
-
