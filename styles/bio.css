@@ -413,4 +413,62 @@ html {
   .photo-gallery__heading {
     padding: 1rem 0 1rem 1rem;
   }
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+}
+.comments__heading {
+  font-weight: 600;
+  padding-top: 1.5rem;
+}
+.comments__subheading {
+  font-weight: 600;
+  color: #AFAFAF;
+  font-size: 0.7rem;
+  padding-top: 1rem;
+}
+.comments__image {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.comments__add-comment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#commentSubmit {
+  color: #FAFAFA;
+  background-color: #323232;
+  width: 60%;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  border-style: none;
+  margin-top: 2rem;
+}
+
+#commentText {
+  background-color: #E1E1E1;
+  border-color: #ffffff;
+  border-radius: 0.5rem;
+  width: 60%;
+  height: 4rem;
+}
+
+#name {
+  background-color: #E1E1E1;
+  border-color: #ffffff;
+  border-radius: 0.5rem;
+  width: 60%;
+}
+
+hr {
+  margin: auto;
+  border-top: 1px solid #AFAFAF;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  width: 90%;
 }/*# sourceMappingURL=bio.css.map */

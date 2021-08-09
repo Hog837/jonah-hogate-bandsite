@@ -261,6 +261,7 @@ html {
 }
 .shows-hero__container {
   background-image: url("/assets/Images/hero-shows.jpg");
+  background: linear-gradient();
   background-size: 100%;
   width: 100%;
   background-position: center;

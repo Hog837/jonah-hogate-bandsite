@@ -81,13 +81,21 @@
                 <img class="photo-gallery__image" src="assets\Images\Photo-gallery-9.jpg" alt="confeti with hands up">
             </div>
         </section>
-        <section class="comment__section">
-            <h1>Join the Conversation</h1>
-            <label>NAME</label>
-            <input type="text" id="name">Enter your name</input>
-            <input type="text" id="commentText">Add a new comment</input>
+        <section class="comments">
+            <h1 class="comments__heading">Join the Conversation</h1>
+            <div class="comments__image-container">
+                <img class="comments__image" src="./assets/Images/Mohan-muruge.jpg" alt="user image">
+            </div>
+            <div class="comments__add-comment">
+            <label class="comments__subheading">NAME</label>
+            <input type="text" id="name" placeholder="Enter your name"></input>
+            <label class="comments__subheading">COMMENT</label>
+            <input type="text" id="commentText" placeholder="Add a new comment"></input>
             <button id="commentSubmit">Comment</button>
-            <!-- <img src="./assets/Images/Mohan-muruge.jpg" class="comment__user-image"> -->
+            </div>
+            <hr>
+            <div class="comments__container"></div>
+
         </section>
     </main>
     <footer class="footer">
@@ -122,7 +130,7 @@
                     <div class="footer__contact-info">
                         <p>Booking Agent for</p>
                         <p>US / Sout America / Japan</p>
-                     </div>
+                    </div>
                     <div class="footer__contact-info">
                         <p>pearl.gregg@limitlessage.com</p>
                     </div>
