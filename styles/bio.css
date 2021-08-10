@@ -418,10 +418,12 @@ html {
 .comments {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .comments__heading {
   font-weight: 600;
   padding-top: 1.5rem;
+  padding-left: 1rem;
 }
 .comments__subheading {
   font-weight: 600;
@@ -430,45 +432,97 @@ html {
   padding-top: 1rem;
 }
 .comments__image {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.25rem;
+  height: 2.25rem;
   border-radius: 50%;
+  margin-top: 1.9rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 .comments__add-comment {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  width: 100%;
+}
+.comments__top-container {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+}
+.comments__div-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+}
+.comments__image-container {
+  background-color: #E1E1E1;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.comments__data-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment__all-container {
+  display: flex;
+}
+
+.comment__image {
+  padding-left: 1rem;
+}
+
+.comment__name {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.comment__text {
+  display: flex;
+  font-weight: 400;
+  font-size: 0.9rem;
 }
 
 #commentSubmit {
   color: #FAFAFA;
   background-color: #323232;
-  width: 60%;
+  width: auto;
   height: 2.5rem;
   border-radius: 0.25rem;
   border-style: none;
   margin-top: 2rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 #commentText {
-  background-color: #E1E1E1;
-  border-color: #ffffff;
-  border-radius: 0.5rem;
-  width: 60%;
-  height: 4rem;
+  background-color: #FAFAFA;
+  border-color: #E1E1E1;
+  border-radius: 0.25rem;
+  width: auto;
+  height: 5rem;
+  margin-right: 1rem;
 }
 
 #name {
-  background-color: #E1E1E1;
-  border-color: #ffffff;
-  border-radius: 0.5rem;
-  width: 60%;
+  background-color: #FAFAFA;
+  border-color: #E1E1E1;
+  height: 2.25rem;
+  border-radius: 0.25rem;
+  width: auto;
+  margin-right: 1rem;
 }
 
 hr {
   margin: auto;
-  border-top: 1px solid #AFAFAF;
+  border-top: 1px solid #E1E1E1;
   margin-bottom: 1rem;
   margin-top: 1rem;
-  width: 90%;
+  width: 95%;
 }/*# sourceMappingURL=bio.css.map */

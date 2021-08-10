@@ -19,10 +19,10 @@
 }
 @mixin divider{
     margin: auto;
-    border-top:1px solid #AFAFAF;
+    border-top:1px solid #E1E1E1;
     margin-bottom: 1rem;
     margin-top: 1rem;
-    width: 90%;
+    width: 95%;
 }
 @mixin desktop-view  {
     @media only screen and (min-width: 1280px){
