@@ -24,13 +24,14 @@
     margin-top: 1rem;
     width: 95%;
 }
-@mixin desktop-view  {
-    @media only screen and (min-width: 1280px){
+
+@mixin tablet-view {
+    @media only screen and (min-width: 768px) {
         @content;
     }
 }
-@mixin tablet-view {
-    @media only screen and (min-width: 768px) {
+@mixin desktop-view  {
+    @media only screen and (min-width: 1280px){
         @content;
     }
 }

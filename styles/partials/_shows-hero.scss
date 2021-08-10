@@ -4,21 +4,61 @@
     display: flex;
     color: #fff;
 
+    &__opacity{
+        opacity: 0.5;
+    }
+
     &__container{
+    display: flex;
+    flex-direction: column;
     background-image: url("/assets/Images/hero-shows.jpg");
     background: linear-gradient();
     background-size: 100%;
     width: 100%;
     background-position: center;
-    height: 15rem;
+    height: 20rem;
+        @include tablet-view{
+            height: 30rem;
+        }
+
     }
     &__header3{
         color: #fafafa;
         padding: 2rem 0 2rem 1rem;
         font-weight: 400;
+        @include tablet-view{
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.5rem;
+            padding: 2rem 0 2rem 2rem;
+        }
     }
     &__header1{
+        color: #fff;
         font-weight: 600;
         padding-left: 1rem;
+        @include tablet-view{
+            font-size: 4rem;
+            width: 75%;
+            padding-left: 2rem;
+        }
+    }
+    &__soundcloud{
+        display: flex;
+        height: 6rem;
+        width: 70%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        @include tablet-view{
+            height: 9rem;
+            width: 30rem;
+        }
+    }
+    &__iframe{
+        @include tablet-view{
+            width: 100%;
+            padding-left: 1.25rem;
+        }
     }
 }
