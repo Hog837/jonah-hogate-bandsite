@@ -1,3 +1,5 @@
+let apiKey = "https://project-1-api.herokuapp.com/comments?api_key=c05d162e-b795-40f8-a99e-c8ecaaa5237c"
+
 const comments = [
     {
         img: '',
