@@ -1,34 +1,44 @@
 let apiKey = "https://project-1-api.herokuapp.com/comments?api_key=c05d162e-b795-40f8-a99e-c8ecaaa5237c"
 
-const comments = [
-    {
-        img: '',
-        name: 'Connor Walton',
-        timestamp: '02/17/2021',
-        text: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
-    }, {
-        img: '',
-        name: 'Emilie Beach',
-        timestamp: '12/09/2021',
-        text: "feel blessed to have seen them in person. What a show! They were just  perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
-    }, {
-        img: '',
-        name: 'Miles Acosta',
-        timestamp: '12/20/2020',
-        text: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
-    }
-];
+axios({
+    method: 'get',
+    url: apiKey
+})
+    .then((response) => {
+        comments = response.data
+        displayComments();
+        console.log(comments);
+    })
+
+// const comments = [
+//     {
+//         img: '',
+//         name: 'Connor Walton',
+//         timestamp: '02/17/2021',
+//         text: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
+//     }, {
+//         img: '',
+//         name: 'Emilie Beach',
+//         timestamp: '12/09/2021',
+//         text: "feel blessed to have seen them in person. What a show! They were just  perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
+//     }, {
+//         img: '',
+//         name: 'Miles Acosta',
+//         timestamp: '12/20/2020',
+//         text: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
+//     }
+// ];
 
 document.getElementById('commentSubmit').addEventListener('click', createComment);
-displayComments();
+displayComments(comments);
 
 function displayComments() {
     comments.forEach((comment) => {
         //html for display
         console.log(comment.name);
-        console.log(comment.text);
+        console.log(comment.comment);
         console.log(comment.timestamp);
-        // createing comment container
+        // creating comment container
         const commentsContainer = document.querySelector('.comments__container');
 
         // creating all container
@@ -63,11 +73,16 @@ function displayComments() {
         topContainer.appendChild(commentName);
         // creating and appending the timestamp
         const commentTimestamp = document.createElement('p');
-        commentTimestamp.innerText = comment.timestamp;
+        commentTimestamp.innerText = new Date(Number(comment.timestamp)).toLocaleDateString('en-US', {
+            month: 'numeric',
+            day: 'numeric',
+            year: 'numeric'
+        }).split(',').join('');
+
         topContainer.appendChild(commentTimestamp)
         // creating and appending the text
         const commentText = document.createElement('p');
-        commentText.innerText = comment.text;
+        commentText.innerText = comment.comment;
         commentText.classList.add('comment__text');
         commentsContainer.appendChild(commentText)
         // appending the data container
@@ -90,13 +105,13 @@ function displayComments() {
 function createComment() {
     let userName = document.getElementById('name').value;
     let text = document.getElementById('commentText').value;
-    let date = new Date();
-    dateData = date.getDate() + '/' + (date.getMonth()+1) + '/' + date.getFullYear();
+    let date = new Date;
+
     let comment = {
         img: '',
         name: userName,
         timestamp: date,
-        text
+        comment: ''
     };
     
     console.log(`${userName} - ${text} - ${date}`);
@@ -108,6 +123,6 @@ function createComment() {
 
     comments.unshift(comment);
     commentsContainer.innerHTML = '';
-    displayComments();
+    
     
 }

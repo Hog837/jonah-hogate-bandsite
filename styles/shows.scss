@@ -97,3 +97,8 @@ hr{
         display: none;
     }
 }
+.table__header{
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 15rem;
+}

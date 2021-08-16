@@ -1,53 +1,27 @@
-let apiKey = 'https://project-1-api.herokuapp.com/showdates?api_key=c05d162e-b795-40f8-a99e-c8ecaaa5237c';
+const apiKey = 'https://project-1-api.herokuapp.com/showdates?api_key=c05d162e-b795-40f8-a99e-c8ecaaa5237c';
+let shows;
 
-
-
-
-let shows = [
-    {
-        date: 'Mon Sept 06 2021',
-        venue: 'Ronald Lane',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Tue Sept 21 2021',
-        venue: 'Pier 3 East',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Fri Oct 15 2021',
-        venue: 'View Lounge',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Sat Nov 06 2021',
-        venue: 'Hyatt Agency',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Fri Nov 26 2021',
-        venue: 'Moscow Center',
-        location: 'San Francisco, CA'
-    },
-    {
-        date: 'Wed Dec 15 2021',
-        venue: 'Press Club',
-        location: 'San Francisco, CA'
-    },
-];
+// axios get request for the shows list
+axios({
+    method: 'get',
+    url: apiKey
+})
+    .then((response) => {
+        shows = response.data
+        generateShowsList(shows);
+        console.log(shows);
+    })
 
 const showsList = document.querySelector('.shows__list');
 
 const generateShowsContent = (showData) => {
 
 /*created section for shows*/
-
 const showListSection = document.createElement('section');
 showListSection.classList.add('shows__section');
 showsList.appendChild(showListSection);
 
 /*create dates section*/
-
 const datesHeader = document.createElement('span');
 datesHeader.classList.add('shows__headers');
 datesHeader.innerText = 'DATES';
@@ -55,11 +29,15 @@ showListSection.appendChild(datesHeader);
 
 const datesData = document.createElement('p');
 datesData.classList.add('shows__data');
-datesData.innerText = showData.date;
+datesData.innerText = new Date(Number(showData.date)).toLocaleDateString('en-US', {
+    weekday: 'short',
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric'
+}).split(',').join('');
 showListSection.appendChild(datesData);
 
 /*creates venue section*/
-
 const venueHeader = document.createElement('span');
 venueHeader.classList.add('shows__headers');
 venueHeader.innerText = 'VENUE';
@@ -67,11 +45,10 @@ showListSection.appendChild(venueHeader);
 
 const venueData = document.createElement('p');
 venueData.classList.add('shows__data');
-venueData.innerText = showData.venue;
+venueData.innerText = showData.place;
 showListSection.appendChild(venueData);
 
 /*create location section*/
-
 const locationHeader = document.createElement('span');
 locationHeader.classList.add('shows__headers');
 locationHeader.innerText = 'LOCATION';
@@ -94,6 +71,7 @@ showListSection.appendChild(divider);
 return showListSection
 
 }
+
 const generateShowsList = (shows) => {
     for (let i = 0; i < shows.length; i++){
         const showData = shows[i];
@@ -103,4 +81,13 @@ const generateShowsList = (shows) => {
         showsList.appendChild(showSections);
     }
 }
-generateShowsList(shows);
+
+// function dateFormatter(date) {
+//     // DD/MM/YYYY
+//     const month = date.getMonth() + 1;
+//     const days = date.getDate() + 1;
+//     const year = date.getFullYear();
+
+//     return `${month}/${days}/${year}`;
+// }
+
