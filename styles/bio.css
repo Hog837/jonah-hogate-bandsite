@@ -421,6 +421,11 @@ html {
   flex-direction: column;
   width: 100%;
 }
+@media only screen and (min-width: 768px) {
+  .comments {
+    padding-right: 3rem;
+  }
+}
 .comments__heading {
   font-weight: 600;
   padding-top: 1.5rem;
@@ -432,6 +437,17 @@ html {
     font-size: 2rem;
     padding-left: 2rem;
     padding-top: 3rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .comments__container {
+    padding-left: 5rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .comments__container {
+    padding-left: 20rem;
+    padding-right: 20rem;
   }
 }
 .comments__subheading {
@@ -455,8 +471,12 @@ html {
 }
 @media only screen and (min-width: 768px) {
   .comments__add-comment {
-    padding-right: 4rem;
-    padding-left: 4rem;
+    padding-right: 3rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .comments__add-comment {
+    padding-right: 40rem;
   }
 }
 .comments__top-container {
@@ -480,6 +500,11 @@ html {
   margin-right: 1rem;
   flex-shrink: 0;
 }
+@media only screen and (min-width: 768px) {
+  .comments__image-container {
+    padding-left: 1rem;
+  }
+}
 .comments__data-container {
   display: flex;
   flex-direction: column;
@@ -494,7 +519,7 @@ html {
 }
 @media only screen and (min-width: 768px) {
   .comment__image {
-    padding-left: 3rem;
+    padding-left: 5rem;
   }
 }
 
@@ -521,6 +546,20 @@ html {
   font-size: 1rem;
   font-weight: 400;
 }
+@media only screen and (min-width: 768px) {
+  #commentSubmit {
+    width: 25%;
+    margin-left: 73%;
+    margin-top: 1rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #commentSubmit {
+    width: 30%;
+    margin-left: 67%;
+  }
+}
+
 #commentText {
   background-color: #FAFAFA;
   border-color: #E1E1E1;
@@ -545,4 +584,34 @@ hr {
   margin-bottom: 1rem;
   margin-top: 1rem;
   width: 95%;
+}
+@media only screen and (min-width: 768px) {
+  hr {
+    padding-left: 5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .comments__div-container {
+    margin-left: 3rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .comments__div-container {
+    margin-left: 20rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #comment__hr {
+    margin-left: 6rem;
+    padding-right: 8rem;
+    width: 88%;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #comment__hr {
+    width: 49%;
+    margin-left: 21rem;
+  }
 }/*# sourceMappingURL=bio.css.map */
