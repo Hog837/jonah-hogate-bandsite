@@ -1,36 +1,18 @@
 let apiKey = "https://project-1-api.herokuapp.com/comments?api_key=c05d162e-b795-40f8-a99e-c8ecaaa5237c"
 
-axios({
+// get request for the generated comments
+{axios({
     method: 'get',
     url: apiKey
 })
     .then((response) => {
         comments = response.data
-        displayComments();
+        displayComments(comments);
         console.log(comments);
     })
-
-// const comments = [
-//     {
-//         img: '',
-//         name: 'Connor Walton',
-//         timestamp: '02/17/2021',
-//         text: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
-//     }, {
-//         img: '',
-//         name: 'Emilie Beach',
-//         timestamp: '12/09/2021',
-//         text: "feel blessed to have seen them in person. What a show! They were just  perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
-//     }, {
-//         img: '',
-//         name: 'Miles Acosta',
-//         timestamp: '12/20/2020',
-//         text: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
-//     }
-// ];
+}
 
 document.getElementById('commentSubmit').addEventListener('click', createComment);
-displayComments(comments);
 
 function displayComments() {
     comments.forEach((comment) => {
@@ -111,7 +93,7 @@ function createComment() {
         img: '',
         name: userName,
         timestamp: date,
-        comment: ''
+        comment: text
     };
     
     console.log(`${userName} - ${text} - ${date}`);
@@ -121,8 +103,29 @@ function createComment() {
 
     const commentsContainer = document.querySelector('.comments__container');
 
+    axios({
+        method: 'post',
+        url: apiKey,
+        data: {
+            name: comment.name,
+            comment: comment.comment
+        }
+    })
+
     comments.unshift(comment);
     commentsContainer.innerHTML = '';
-    
-    
+
+    displayComments();
+    sortComments();
+
+    {axios({
+        method: 'get',
+        url: apiKey
+    })
+        .then((response) => {
+            comments = response.data
+            displayComments(comments);
+            console.log(comments);
+        })
+    }
 }
